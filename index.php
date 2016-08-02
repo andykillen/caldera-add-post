@@ -20,8 +20,7 @@ function caldera_extension_scrips_and_styles(){
          if (function_exists('wp_tiny_mce')){
              wp_tiny_mce();
          }
-         
-        error_log(plugin_dir_url( __FILE__ ) . "js/ext-script.js");
+        
         wp_enqueue_script('caldera-extension', plugin_dir_url( __FILE__ ) . "js/ext-script.js",array('jquery'), null,1);
    // }
 }
