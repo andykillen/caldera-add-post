@@ -328,7 +328,7 @@ function caldera_extension_capture_entry($config, $form){
 	// get all submission data
 	$data = Caldera_Forms::get_submission_data( $form );
         
-        //error_log(print_r($data,true),0,"/tmp/php.log");
+        
 	update_post_meta( $entry_id, '_cf_form_id', $form['ID'] );
 	foreach($data as $field=>$value){
 		if ( '_entry_token' != $field && '_entry_id' != $field ) {
@@ -375,11 +375,7 @@ function caldera_extension_capture_entry($config, $form){
                         }
                     }
                 
-                if(is_array($field)){
-                     error_log("two");
-                    error_log(print_r($field,true),0,"/tmp/php.log");
-                }
-               
+                
 
 		if ( $terms_saved ) {
 			if ( is_array( $value ) ) {
